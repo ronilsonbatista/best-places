@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF5B44E543CF848CED2C9F7D /* Pods_BestPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9097C1D57AFC11CD784BE0F4 /* Pods_BestPlaces.framework */; };
 		D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130154D226A216000A2EB63 /* AppDelegate.swift */; };
 		D1301550226A216000A2EB63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130154F226A216000A2EB63 /* ViewController.swift */; };
 		D1301553226A216000A2EB63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1301551226A216000A2EB63 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03B7B15FB5514C61FB852C46 /* Pods-BestPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestPlaces.release.xcconfig"; path = "Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		9097C1D57AFC11CD784BE0F4 /* Pods_BestPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BestPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C543A6963F38A83E161B6336 /* Pods-BestPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestPlaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		D130154A226A216000A2EB63 /* BestPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D130154D226A216000A2EB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D130154F226A216000A2EB63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF5B44E543CF848CED2C9F7D /* Pods_BestPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		921C5C77C6A377145CF7344E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9097C1D57AFC11CD784BE0F4 /* Pods_BestPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9EDEBD892D211FECC8C7BF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C543A6963F38A83E161B6336 /* Pods-BestPlaces.debug.xcconfig */,
+				03B7B15FB5514C61FB852C46 /* Pods-BestPlaces.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1301541226A216000A2EB63 = {
 			isa = PBXGroup;
 			children = (
 				D130154C226A216000A2EB63 /* BestPlaces */,
 				D130154B226A216000A2EB63 /* Products */,
+				A9EDEBD892D211FECC8C7BF1 /* Pods */,
+				921C5C77C6A377145CF7344E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,46 @@
 		D130154C226A216000A2EB63 /* BestPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				D130154D226A216000A2EB63 /* AppDelegate.swift */,
+				D130155F226A264D00A2EB63 /* Features */,
+				D1301560226A265A00A2EB63 /* Helpers */,
+				D1301561226A266300A2EB63 /* Resources */,
+				D1301562226A266D00A2EB63 /* Services */,
+			);
+			path = BestPlaces;
+			sourceTree = "<group>";
+		};
+		D130155F226A264D00A2EB63 /* Features */ = {
+			isa = PBXGroup;
+			children = (
 				D130154F226A216000A2EB63 /* ViewController.swift */,
 				D1301551226A216000A2EB63 /* Main.storyboard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D1301560226A265A00A2EB63 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D1301561226A266300A2EB63 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D130154D226A216000A2EB63 /* AppDelegate.swift */,
 				D1301554226A216100A2EB63 /* Assets.xcassets */,
 				D1301556226A216100A2EB63 /* LaunchScreen.storyboard */,
 				D1301559226A216100A2EB63 /* Info.plist */,
 			);
-			path = BestPlaces;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1301562226A266D00A2EB63 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D130155C226A216100A2EB63 /* Build configuration list for PBXNativeTarget "BestPlaces" */;
 			buildPhases = (
+				A2498741851F4755DB55DA7D /* [CP] Check Pods Manifest.lock */,
 				D1301546226A216000A2EB63 /* Sources */,
 				D1301547226A216000A2EB63 /* Frameworks */,
 				D1301548226A216000A2EB63 /* Resources */,
+				BEBF358E0BA8CFF9DB1A89DC /* [CP] Embed Pods Frameworks */,
+				0D14939A16D6F3D975400CF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +188,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D14939A16D6F3D975400CF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2498741851F4755DB55DA7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BestPlaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEBF358E0BA8CFF9DB1A89DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1301546226A216000A2EB63 /* Sources */ = {
@@ -280,6 +412,7 @@
 		};
 		D130155D226A216100A2EB63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C543A6963F38A83E161B6336 /* Pods-BestPlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +431,7 @@
 		};
 		D130155E226A216100A2EB63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B7B15FB5514C61FB852C46 /* Pods-BestPlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
