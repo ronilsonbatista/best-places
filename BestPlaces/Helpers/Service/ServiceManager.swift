@@ -24,6 +24,10 @@ final class ServiceManager: ServiceManagerProtocol {
         // HTTP method used
         let requestMethod = HTTPMethod(rawValue: method.rawValue)!
         
+        if !Connectivity.isConnectedToInternet() {
+            failure(ServiceError(type: .noConnection))
+            return
+        }
         
         // Request
         Alamofire.request(url, method: requestMethod, parameters: parameters, encoding: requestEncoding, headers: nil)

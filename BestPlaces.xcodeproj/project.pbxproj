@@ -19,6 +19,7 @@
 		D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130156D226A694D00A2EB63 /* ServiceEncoding.swift */; };
 		D1301570226A699200A2EB63 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130156F226A699200A2EB63 /* ServiceManager.swift */; };
 		D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301571226A6A8B00A2EB63 /* ServiceError.swift */; };
+		D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301573226B4C4200A2EB63 /* Connectivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D130156D226A694D00A2EB63 /* ServiceEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEncoding.swift; sourceTree = "<group>"; };
 		D130156F226A699200A2EB63 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1301571226A6A8B00A2EB63 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		D1301573226B4C4200A2EB63 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				D1301567226A68DF00A2EB63 /* ServiceManagerProtocol.swift */,
 				D1301569226A690D00A2EB63 /* ServiceHTTPMethod.swift */,
 				D130156D226A694D00A2EB63 /* ServiceEncoding.swift */,
+				D1301573226B4C4200A2EB63 /* Connectivity.swift */,
 			);
 			path = ServiceMethods;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */,
 				D1301550226A216000A2EB63 /* ViewController.swift in Sources */,
+				D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,
 				D130156A226A690D00A2EB63 /* ServiceHTTPMethod.swift in Sources */,
