@@ -37,9 +37,42 @@ final class ServiceManager: ServiceManagerProtocol {
                 
                 switch response.result {
                     
-                case .success: success(response.data!)
-                case .failure: failure(ServiceError(type: .badRequest))
+                case .success:
+                    guard let responseData = response.data else {
+                        failure(ServiceError(type: .badRequest))
+                        return
+                    }
+                    
+                    success(responseData)
+                    
+                case .failure(let error):
+                    if error._code == NSURLErrorTimedOut {
+                        failure(ServiceError(type: .timeout))
+                        return
+                    }
+                    
+                    switch response.response?.statusCode {
+                    case 403: failure(ServiceError(type: .forbidden))
+                    case 401: failure(ServiceError(type: .unauthorized))
+                    case 400: break;
+                    default: failure(self.handleError(with: response))
+                    }
                 }
+        }
+    }
+    
+    private func handleError(with response: DataResponse<Any>) -> ServiceError {
+        
+        guard let statusCode = response.response?.statusCode else {
+            return ServiceError(type: .badRequest)
+        }
+        
+        switch statusCode {
+        case ServiceError.ErrorType.badRequest.code:
+            return ServiceError(type: .badRequest, object: response.data)
+        default:
+            let errorType = ServiceError.ErrorType(statusCode: statusCode)
+            return ServiceError(type: errorType)
         }
     }
 }
