@@ -20,6 +20,9 @@
 		D1301570226A699200A2EB63 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130156F226A699200A2EB63 /* ServiceManager.swift */; };
 		D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301571226A6A8B00A2EB63 /* ServiceError.swift */; };
 		D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301573226B4C4200A2EB63 /* Connectivity.swift */; };
+		D1301578226BF6AE00A2EB63 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301577226BF6AE00A2EB63 /* PlacesService.swift */; };
+		D130157A226BF9A300A2EB63 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301579226BF9A300A2EB63 /* Environment.swift */; };
+		D130157C226C1C4800A2EB63 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130157B226C1C4800A2EB63 /* Places.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D130156F226A699200A2EB63 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1301571226A6A8B00A2EB63 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D1301573226B4C4200A2EB63 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		D1301577226BF6AE00A2EB63 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		D1301579226BF9A300A2EB63 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		D130157B226C1C4800A2EB63 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,7 @@
 				D1301554226A216100A2EB63 /* Assets.xcassets */,
 				D1301556226A216100A2EB63 /* LaunchScreen.storyboard */,
 				D1301559226A216100A2EB63 /* Info.plist */,
+				D1301579226BF9A300A2EB63 /* Environment.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 		D1301562226A266D00A2EB63 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D1301575226B543500A2EB63 /* Places */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -155,6 +163,23 @@
 				D1301564226A689400A2EB63 /* ServiceMethods */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D1301575226B543500A2EB63 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				D1301576226B546B00A2EB63 /* Entities */,
+				D1301577226BF6AE00A2EB63 /* PlacesService.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		D1301576226B546B00A2EB63 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D130157B226C1C4800A2EB63 /* Places.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,14 +330,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */,
+				D1301578226BF6AE00A2EB63 /* PlacesService.swift in Sources */,
 				D1301550226A216000A2EB63 /* ViewController.swift in Sources */,
 				D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,
 				D130156A226A690D00A2EB63 /* ServiceHTTPMethod.swift in Sources */,
+				D130157A226BF9A300A2EB63 /* Environment.swift in Sources */,
 				D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */,
 				D1301570226A699200A2EB63 /* ServiceManager.swift in Sources */,
 				D1301566226A68B500A2EB63 /* ServiceRequest.swift in Sources */,
+				D130157C226C1C4800A2EB63 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
