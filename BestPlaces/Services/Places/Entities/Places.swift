@@ -23,20 +23,19 @@ struct Places: Codable {
     }
 }
 
-
 struct Result: Codable {
     let geometry: Geometry
     let icon: String
     let id, name: String
-    let openingHours: OpeningHours
-    let photos: [Photo]
+    let openingHours: OpeningHours?
+    let photos: [Photo]?
     let placeID: String
     let plusCode: PlusCode
-    let rating: Double
+    let rating: Double?
     let reference, scope: String
     let types: [String]
-    let userRatingsTotal: Int
-    let vicinity: String
+    let userRatingsTotal: Int?
+    let vicinity: String?
     
     enum CodingKeys: String, CodingKey {
         case geometry, icon, id, name
@@ -64,7 +63,7 @@ struct Viewport: Codable {
 }
 
 struct OpeningHours: Codable {
-    let openNow: Bool
+    let openNow: Bool?
     
     enum CodingKeys: String, CodingKey {
         case openNow = "open_now"

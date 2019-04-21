@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var placesService = PlacesService()
+    var places: Places?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.placesService.getPlaces(location: "-22.9035, -43.20963", success: { places in
+            guard let places = places else {
+                return
+            }
+            
+            self.places = places
+        }) {  error in
+            print("Error: \(error)")
+        }
     }
-
-
+    
 }
-
