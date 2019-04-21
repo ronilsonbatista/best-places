@@ -15,82 +15,39 @@ class ListPlacesViewController: UICollectionViewController {
     
     fileprivate var presenter: ListPlacesPresenter!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
         self.presenter = ListPlacesPresenter(view: self)
         self.presenter.setupInitialization()
+        self.collectionView.backgroundColor = .colorBackground
+
+        // Register cell classes
+         self.collectionView!.register(UINib(nibName: ListPlacesViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ListPlacesViewCell.identifier)
     }
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: UICollectionViewDataSource
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
+extension ListPlacesViewController {
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return self.presenter.places?.results.count ?? 0
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListPlacesViewCell.identifier, for: indexPath) as! ListPlacesViewCell
+        
+        cell.setup(places: (self.presenter.places?.results[indexPath.row])!)
+        
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-    
 }
 
 // MARK: ListPlacesProtocol
@@ -99,8 +56,8 @@ extension ListPlacesViewController: ListPlacesProtocol {
     
     func startLoading() {
         SVProgressHUD.setDefaultStyle(.custom)
-        SVProgressHUD.setForegroundColor(.blue)
-        SVProgressHUD.setBackgroundColor(.red)
+        SVProgressHUD.setForegroundColor(.colorGreenyBlue)
+        SVProgressHUD.setBackgroundColor(.colorBackground)
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
     }
@@ -113,7 +70,17 @@ extension ListPlacesViewController: ListPlacesProtocol {
         self.collectionView.reloadData()
     }
     
+    func showAlertError(with title: String, message: String, buttonTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func navigationBarConfiguration() {
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15.0, weight: UIFont.Weight.semibold)]
+        self.navigationController?.navigationBar.barTintColor = .colorDarkishPink
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationItem.setHidesBackButton(true, animated :true)
     }
 }

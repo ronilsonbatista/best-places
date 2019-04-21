@@ -13,5 +13,6 @@ protocol ListPlacesProtocol: class {
     func startLoading()
     func stopLoading()
     func reloadView()
+    func showAlertError(with title: String, message: String, buttonTitle: String)
     func navigationBarConfiguration()
 }
