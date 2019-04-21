@@ -12,7 +12,7 @@ final class PlacesService {
     
     func getPlaces(location: String, success: @escaping (Places?) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
         
-        let serviceUrl = ServiceURL.places.value
+        let serviceUrl = ServiceURL.domain.value + ServiceURL.places.value
         
         let parameters = ["location": location,
                           "radius": 500,
@@ -33,7 +33,7 @@ final class PlacesService {
     
     func getDetailsPlaces(placeid: String, success: @escaping (DetailsPlaces?) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
         
-        let serviceUrl = ServiceURL.detailsPlaces.value
+        let serviceUrl = ServiceURL.domain.value + ServiceURL.detailsPlaces.value
         
         let parameters = ["placeid": placeid,
                           "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
@@ -48,7 +48,5 @@ final class PlacesService {
         }, failure: { serviceError  in
             fail(serviceError)
         })
-    }
-    
-    
+    }    
 }

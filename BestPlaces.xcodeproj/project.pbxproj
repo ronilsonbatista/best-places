@@ -130,9 +130,9 @@
 			children = (
 				D130154D226A216000A2EB63 /* AppDelegate.swift */,
 				D1301554226A216100A2EB63 /* Assets.xcassets */,
-				D1301556226A216100A2EB63 /* LaunchScreen.storyboard */,
-				D1301559226A216100A2EB63 /* Info.plist */,
 				D1301579226BF9A300A2EB63 /* Environment.swift */,
+				D1301559226A216100A2EB63 /* Info.plist */,
+				D1301556226A216100A2EB63 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
