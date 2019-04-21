@@ -52,6 +52,11 @@ extension ListPlacesViewController {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
+    
+        return CGSize(width: self.collectionView.bounds.size.width, height: 132)
+    }
 }
 
 // MARK: ListPlacesProtocol

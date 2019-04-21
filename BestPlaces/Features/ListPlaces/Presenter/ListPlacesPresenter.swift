@@ -48,7 +48,7 @@ extension ListPlacesPresenter {
     }
     
     func handleError() {
-        self.view.startLoading()
+        self.view.stopLoading()
         self.view.showAlertError(with: "Erro encontrado", message: "Desculpe-nos pelo erro. Iremos contorná-lo o mais rápido possível.", buttonTitle: "OK")
     }
 }
