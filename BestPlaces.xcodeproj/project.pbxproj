@@ -23,6 +23,7 @@
 		D1301578226BF6AE00A2EB63 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301577226BF6AE00A2EB63 /* PlacesService.swift */; };
 		D130157A226BF9A300A2EB63 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301579226BF9A300A2EB63 /* Environment.swift */; };
 		D130157C226C1C4800A2EB63 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130157B226C1C4800A2EB63 /* Places.swift */; };
+		D130157E226C22BA00A2EB63 /* DetailsPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D1301577226BF6AE00A2EB63 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
 		D1301579226BF9A300A2EB63 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D130157B226C1C4800A2EB63 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlaces.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D130157B226C1C4800A2EB63 /* Places.swift */,
+				D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */,
+				D130157E226C22BA00A2EB63 /* DetailsPlaces.swift in Sources */,
 				D1301578226BF6AE00A2EB63 /* PlacesService.swift in Sources */,
 				D1301550226A216000A2EB63 /* ViewController.swift in Sources */,
 				D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */,

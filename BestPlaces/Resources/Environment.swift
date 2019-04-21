@@ -9,11 +9,14 @@
 import Foundation
 
 enum ServiceURL {
+    
     case places
+    case detailsPlaces
     
     var value: String {
         switch self {
         case .places: return "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+        case .detailsPlaces: return "https://maps.googleapis.com/maps/api/place/details/json"
         }
     }
 }

@@ -21,8 +21,8 @@ final class PlacesService {
         
         ServiceRequest.shared.request(method: .get, url: serviceUrl, parameters: parameters, encoding: .default, success: { result in
             do {
-                let enterprises = try JSONDecoder().decode(Places.self, from: result)
-                success(enterprises)
+                let places = try JSONDecoder().decode(Places.self, from: result)
+                success(places)
             } catch {
                 success(nil)
             }
@@ -30,4 +30,25 @@ final class PlacesService {
             fail(serviceError)
         })
     }
+    
+    func getDetailsPlaces(placeid: String, success: @escaping (DetailsPlaces?) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
+        
+        let serviceUrl = ServiceURL.detailsPlaces.value
+        
+        let parameters = ["placeid": placeid,
+                          "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
+        
+        ServiceRequest.shared.request(method: .get, url: serviceUrl, parameters: parameters, encoding: .default, success: { result in
+            do {
+                let detailsPlaces = try JSONDecoder().decode(DetailsPlaces.self, from: result)
+                success(detailsPlaces)
+            } catch {
+                success(nil)
+            }
+        }, failure: { serviceError  in
+            fail(serviceError)
+        })
+    }
+    
+    
 }
