@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol ListPlacesProtocol: class {
+    
+    func startLoading()
+    func stopLoading()
+    func reloadView()
+    func navigationBarConfiguration()
+}

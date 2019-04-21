@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 private let reuseIdentifier = "Cell"
 
 class ListPlacesViewController: UICollectionViewController {
+    
+    fileprivate var presenter: ListPlacesPresenter!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,8 @@ class ListPlacesViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
+        self.presenter = ListPlacesPresenter(view: self)
+        self.presenter.setupInitialization()
     }
 
     /*
@@ -86,4 +91,29 @@ class ListPlacesViewController: UICollectionViewController {
     }
     */
     
+}
+
+// MARK: ListPlacesProtocol
+
+extension ListPlacesViewController: ListPlacesProtocol {
+    
+    func startLoading() {
+        SVProgressHUD.setDefaultStyle(.custom)
+        SVProgressHUD.setForegroundColor(.blue)
+        SVProgressHUD.setBackgroundColor(.red)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.show()
+    }
+    
+    func stopLoading() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func reloadView() {
+        self.collectionView.reloadData()
+    }
+    
+    func navigationBarConfiguration() {
+        
+    }
 }
