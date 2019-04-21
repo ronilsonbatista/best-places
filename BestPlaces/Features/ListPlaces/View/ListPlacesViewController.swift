@@ -24,6 +24,10 @@ class ListPlacesViewController: UICollectionViewController {
 
         // Register cell classes
          self.collectionView!.register(UINib(nibName: ListPlacesViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ListPlacesViewCell.identifier)
+        
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(width: self.collectionView.bounds.size.width, height: 132)
+        }
     }
 }
 
@@ -44,7 +48,7 @@ extension ListPlacesViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListPlacesViewCell.identifier, for: indexPath) as! ListPlacesViewCell
         
-        cell.setup(places: (self.presenter.places?.results[indexPath.row])!)
+        cell.setup(place: (self.presenter.places?.results[indexPath.row])!)
         
         return cell
     }
