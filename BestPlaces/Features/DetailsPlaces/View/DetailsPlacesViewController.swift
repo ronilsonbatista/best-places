@@ -17,15 +17,16 @@ class DetailsPlacesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.presenter = DetailsPlacesPresenter(view: self)
         self.presenter.setupInitialization(placeId: self.placeId)
-//        self.tableView.backgroundColor = .colorBackground
         
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 308
         
         self.tableView.register(UINib(nibName: DetailsPlacesViewCell.identifier, bundle: nil), forCellReuseIdentifier: DetailsPlacesViewCell.identifier)
+        
+        self.tableView.register(UINib(nibName: ReviewsViewCell.identifier, bundle: nil), forCellReuseIdentifier: ReviewsViewCell.identifier)
     }
 }
 
@@ -34,20 +35,37 @@ class DetailsPlacesViewController: UITableViewController {
 extension DetailsPlacesViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let details = self.presenter.details else { return 0 }
+        
+        if section == 0 { return 1 }
+        
+        return details.reviews.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let details =  self.presenter.details else { return UITableViewCell() }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: DetailsPlacesViewCell.identifier, for: indexPath) as! DetailsPlacesViewCell
-        cell.setup(place: details)
-        return cell
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: DetailsPlacesViewCell.identifier, for: indexPath) as! DetailsPlacesViewCell
+            cell.setup(place: details)
+            return cell
+            
+        case 1:
+            if details.reviews.count > 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: ReviewsViewCell.identifier, for: indexPath) as! ReviewsViewCell
+                cell.setupReviews(reviews: details.reviews[indexPath.row])
+                return cell
+            }
+            
+             return UITableViewCell()
+        default:  return UITableViewCell()
+        }
     }
 }
 
@@ -82,6 +100,5 @@ extension DetailsPlacesViewController: DetailsPlacesProtocol {
         self.navigationController?.navigationBar.barTintColor = .colorDarkishPink
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.tintColor = .white
-//        self.navigationItem.setHidesBackButton(true, animated :true)
     }
 }

@@ -42,8 +42,8 @@ class DetailsPlacesViewCell: UITableViewCell {
         self.ratingLabel.text =  String(format:"%.1f", place.rating)
         self.ratingLabel.textColor = place.ratingColor
         
-        if place.reviews.count == 1 { self.reviewsLabel.text = "Avaliação" }
-        if place.reviews.count > 1 { self.reviewsLabel.text = "Avaliações" }
+        if place.reviews.count == 1 { self.reviewsLabel.text = "Avaliação:" }
+        if place.reviews.count > 1 { self.reviewsLabel.text = "Avaliações:" }
         
         if place.reviews.count < 1 {
             self.reviewsLabel.isHidden = true

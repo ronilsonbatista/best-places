@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class ReviewsViewModel: NSObject {
     
@@ -20,7 +21,7 @@ final class ReviewsViewModel: NSObject {
         
         self.authorName = authorName
         self.rating = rating
-        self.profilePhotoURL = relativeTimeDescription
+        self.profilePhotoURL = profilePhotoURL
         self.relativeTimeDescription = relativeTimeDescription
         self.text = text
     }
@@ -34,6 +35,20 @@ final class ReviewsViewModel: NSObject {
     
     var hasRelativeTimeDescription: Bool {
         if self.relativeTimeDescription.isEmpty {
+            return false
+        }
+        return true
+    }
+    
+    var ratingColor: UIColor {
+        if self.rating > 2.5 {
+            return .green
+        }
+        return .red
+    }
+    
+    var ratingText: Bool {
+        if self.text.isEmpty {
             return false
         }
         return true
