@@ -13,12 +13,19 @@ class DetailsPlacesViewController: UITableViewController {
     
     fileprivate var presenter: DetailsPlacesPresenter!
     
-    var placeId: String?
+    var placeId = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.presenter = DetailsPlacesPresenter(view: self)
+        self.presenter.setupInitialization(placeId: self.placeId)
+//        self.tableView.backgroundColor = .colorBackground
+        
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 308
+        
+        self.tableView.register(UINib(nibName: DetailsPlacesViewCell.identifier, bundle: nil), forCellReuseIdentifier: DetailsPlacesViewCell.identifier)
     }
 }
 
@@ -27,13 +34,20 @@ class DetailsPlacesViewController: UITableViewController {
 extension DetailsPlacesViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let details =  self.presenter.details else { return UITableViewCell() }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: DetailsPlacesViewCell.identifier, for: indexPath) as! DetailsPlacesViewCell
+        cell.setup(place: details)
+        return cell
     }
 }
 
@@ -68,6 +82,6 @@ extension DetailsPlacesViewController: DetailsPlacesProtocol {
         self.navigationController?.navigationBar.barTintColor = .colorDarkishPink
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.tintColor = .white
-        self.navigationItem.setHidesBackButton(true, animated :true)
+//        self.navigationItem.setHidesBackButton(true, animated :true)
     }
 }

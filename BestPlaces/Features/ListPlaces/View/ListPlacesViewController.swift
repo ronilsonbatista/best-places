@@ -57,6 +57,14 @@ extension ListPlacesViewController {
     
         return CGSize(width: self.collectionView.bounds.size.width, height: 132)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+   
+        let nextController = DetailsPlacesViewController()
+        nextController.placeId = (self.presenter.places?.results[index].placeID)!
+        self.navigationController?.pushViewController(nextController, animated: true)
+    }
 }
 
 // MARK: ListPlacesProtocol
