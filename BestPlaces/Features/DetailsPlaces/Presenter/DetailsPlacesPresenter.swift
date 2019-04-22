@@ -56,9 +56,9 @@ extension DetailsPlacesPresenter {
         
         var reviewsViewModel: [ReviewsViewModel] = []
         
-        for reviews in detail.reviews {
+        for reviews in detail.reviews ?? [] {
             reviewsViewModel.append(ReviewsViewModel(
-                authorName: reviews.authorName, rating: reviews.rating, profilePhotoURL: reviews.profilePhotoURL, relativeTimeDescription: reviews.relativeTimeDescription, text: reviews.text)
+                authorName: reviews.authorName, rating: reviews.rating ?? 0, profilePhotoURL: reviews.profilePhotoURL ?? "", relativeTimeDescription: reviews.relativeTimeDescription ?? "", text: reviews.text ?? "")
             )
         }
         self.fillDetailsPlacesViewModel(detail: detail, reviewsViewModel: reviewsViewModel)
@@ -67,7 +67,7 @@ extension DetailsPlacesPresenter {
     fileprivate func fillDetailsPlacesViewModel(detail: DetailsResult, reviewsViewModel: [ReviewsViewModel]) {
         
         let details = DetailsPlacesViewModel(
-            name: detail.name, rating: detail.rating, formattedAddress: detail.formattedAddress, formattedPhoneNumber: detail.formattedPhoneNumber, maxwidth: detail.photos.first?.width ?? 0, photoReference: detail.photos.first?.photoReference ?? "", reviews: reviewsViewModel
+            name: detail.name, rating: detail.rating ?? 0, formattedAddress: detail.formattedAddress ?? "", formattedPhoneNumber: detail.formattedPhoneNumber ?? "", maxwidth: detail.photos?.first?.width ?? 0, photoReference: detail.photos?.first?.photoReference ?? "", reviews: reviewsViewModel
         )
         
         self.details = details

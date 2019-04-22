@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.788027"
+            timestampString = "577637960.0011851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.7886471"
+            timestampString = "577637960.0021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.789053"
+            timestampString = "577637960.002629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.789384"
+            timestampString = "577637960.003173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.78968"
+            timestampString = "577637960.003711"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.79002"
+            timestampString = "577637960.004289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577601265.790266"
+            timestampString = "577637960.0047131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -289,6 +289,22 @@
             endingLineNumber = "49"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/GooglePlaces/Frameworks/GooglePlaces.framework/Headers/GMSPlace.h"
+            timestampString = "577637380.607623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "GMSPlace"
+            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

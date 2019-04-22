@@ -24,4 +24,18 @@ final class ReviewsViewModel: NSObject {
         self.relativeTimeDescription = relativeTimeDescription
         self.text = text
     }
+    
+    var hasProfilePhoto: Bool {
+        if self.profilePhotoURL.isEmpty {
+            return false
+        }
+        return true
+    }
+    
+    var hasRelativeTimeDescription: Bool {
+        if self.relativeTimeDescription.isEmpty {
+            return false
+        }
+        return true
+    }
 }

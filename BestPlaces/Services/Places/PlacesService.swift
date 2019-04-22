@@ -20,12 +20,12 @@ final class PlacesService {
                           "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
         
         ServiceRequest.shared.request(method: .get, url: serviceUrl, parameters: parameters, encoding: .default, success: { result in
-//            do {
-                let places = try! JSONDecoder().decode(Places.self, from: result)
+            do {
+                let places = try JSONDecoder().decode(Places.self, from: result)
                 success(places)
-//            } catch {
-//                success(nil)
-//            }
+            } catch {
+                success(nil)
+            }
         }, failure: { serviceError  in
             fail(serviceError)
         })
@@ -39,12 +39,12 @@ final class PlacesService {
                           "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
         
         ServiceRequest.shared.request(method: .get, url: serviceUrl, parameters: parameters, encoding: .default, success: { result in
-            do {
-                let detailsPlaces = try JSONDecoder().decode(DetailsPlaces.self, from: result)
+//            do {
+                let detailsPlaces = try! JSONDecoder().decode(DetailsPlaces.self, from: result)
                 success(detailsPlaces)
-            } catch {
-                success(nil)
-            }
+//            } catch {
+//                success(nil)
+//            }
         }, failure: { serviceError  in
             fail(serviceError)
         })

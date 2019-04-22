@@ -9,18 +9,18 @@
 import Foundation
 
 struct DetailsResult: Codable {
-    let adrAddress: String
-    let formattedAddress: String
-    let formattedPhoneNumber: String
+    let adrAddress: String?
+    let formattedAddress: String?
+    let formattedPhoneNumber: String?
     let name: String
-    let openingHours: OpeningHours
-    let photos: [Photo]
+    let openingHours: OpeningHours?
+    let photos: [Photo]?
     let placeID: String
-    let rating: Double
-    let reviews: [Review]
-    let url: String
+    let rating: Double?
+    let reviews: [Review]?
+    let url: String?
     let vicinity: String
-    let website: String
+    let website: String?
     
     enum CodingKeys: String, CodingKey {
         case adrAddress = "adr_address"

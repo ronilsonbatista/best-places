@@ -11,12 +11,12 @@ import Foundation
 struct Review: Codable {
     let authorName: String
     let authorURL: String
-    let language: String
-    let profilePhotoURL: String
-    let rating: Int
-    let relativeTimeDescription: String
-    let text: String
-    let time: Int
+    let language: String?
+    let profilePhotoURL: String?
+    let rating: Double?
+    let relativeTimeDescription: String?
+    let text: String?
+    let time: Int?
     
     enum CodingKeys: String, CodingKey {
         case authorName = "author_name"

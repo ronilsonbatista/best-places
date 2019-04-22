@@ -18,7 +18,7 @@ final class DetailsPlacesViewModel: NSObject {
     var maxwidth: Int
     var photoReference: String
     var reviews: [ReviewsViewModel]
-
+    
     init(name: String, rating: Double, formattedAddress: String, formattedPhoneNumber: String, maxwidth: Int, photoReference: String, reviews: [ReviewsViewModel]) {
         
         self.name = name
@@ -49,5 +49,19 @@ final class DetailsPlacesViewModel: NSObject {
             return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=\(self.maxwidth)&photoreference=\(self.photoReference)&key=AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"
         }
         return ""
+    }
+    
+    var hasReviews: Bool {
+        if self.reviews.count > 0 {
+            return true
+        }
+        return false
+    }
+    
+    var hasPhoneNumber: Bool {
+        if self.formattedPhoneNumber.isEmpty {
+            return false
+        }
+        return true
     }
 }
