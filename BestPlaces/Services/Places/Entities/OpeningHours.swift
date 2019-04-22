@@ -1,18 +1,17 @@
 //
-//  DetailsPlaces.swift
+//  OpeningHours.swift
 //  BestPlaces
 //
-//  Created by Ronilson Batista on 21/04/19.
+//  Created by Ronilson Batista on 22/04/19.
 //  Copyright © 2019 Ronilson Batista. All rights reserved.
 //
 
 import Foundation
 
-struct DetailsPlaces: Codable {
-    
-    let result: DetailsResult
+struct OpeningHours: Codable {
+    let openNow: Bool?
     
     enum CodingKeys: String, CodingKey {
-        case result
+        case openNow = "open_now"
     }
 }
