@@ -20,6 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Program requires GPS to track cars and job orders</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Program requires GPS to track cars and job orders</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Program requires GPS to track cars and job orders</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App Needs Location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App Needs Location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

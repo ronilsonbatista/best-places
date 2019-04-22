@@ -29,6 +29,12 @@ class ListPlacesViewController: UICollectionViewController {
             flowLayout.estimatedItemSize = CGSize(width: self.collectionView.bounds.size.width, height: 132)
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.presenter.getCurrentLocation()
+    }
 }
 
 // MARK: UICollectionViewDataSource
