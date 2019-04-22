@@ -46,9 +46,15 @@ extension DetailsPlacesPresenter {
             self.handleError()
         }
     }
+}
+
+// MARK: - Private methods
+
+extension DetailsPlacesPresenter {
     
-    func handleError() {
+   fileprivate func handleError() {
         self.view.stopLoading()
         self.view.showAlertError(with: "Erro encontrado", message: "Desculpe-nos pelo erro. Iremos contorná-lo o mais rápido possível.", buttonTitle: "OK")
     }
+    
 }
