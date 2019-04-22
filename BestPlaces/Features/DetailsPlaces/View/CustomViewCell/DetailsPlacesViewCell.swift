@@ -15,16 +15,17 @@ class DetailsPlacesViewCell: UITableViewCell {
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var vicinityLabel: UILabel!
     @IBOutlet weak var openingHoursLabel: UILabel!
-
+    @IBOutlet weak var reviewsLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.placeImage.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setup(place: DetailsPlacesViewModel) {
@@ -32,12 +33,24 @@ class DetailsPlacesViewCell: UITableViewCell {
         self.vicinityLabel.text = place.formattedAddress
         
         if place.hasPhoto {
+            self.placeImage.isHidden = false
             if let imageURL = URL(string: place.photoURL) {
                 self.placeImage!.af_setImage(withURL: imageURL)
             }
-            return
         }
         
-        self.placeImage.isHidden = true
+        self.ratingLabel.text =  String(format:"%.1f", place.rating)
+        self.ratingLabel.textColor = place.ratingColor
+        
+        if place.reviews.count == 1 { self.reviewsLabel.text = "Avaliação" }
+        if place.reviews.count > 1 { self.reviewsLabel.text = "Avaliações" }
+        
+        if place.reviews.count < 1 {
+            self.reviewsLabel.isHidden = true
+            self.ratingLabel.isHidden = true
+        }
+        
+        if place.openNow { self.openingHoursLabel.text = "Aberto" }
+        else { self.openingHoursLabel.text = "Fechado"}
     }
 }

@@ -67,7 +67,7 @@ extension DetailsPlacesPresenter {
     fileprivate func fillDetailsPlacesViewModel(detail: DetailsResult, reviewsViewModel: [ReviewsViewModel]) {
         
         let details = DetailsPlacesViewModel(
-            name: detail.name, rating: detail.rating ?? 0, formattedAddress: detail.formattedAddress ?? "", formattedPhoneNumber: detail.formattedPhoneNumber ?? "", maxwidth: detail.photos?.first?.width ?? 0, photoReference: detail.photos?.first?.photoReference ?? "", reviews: reviewsViewModel
+            name: detail.name, rating: detail.rating ?? 0, formattedAddress: detail.formattedAddress ?? "", formattedPhoneNumber: detail.formattedPhoneNumber ?? "", maxwidth: detail.photos?.first?.width ?? 0, photoReference: detail.photos?.first?.photoReference ?? "", openNow: detail.openingHours?.openNow ?? false, reviews: reviewsViewModel
         )
         
         self.details = details
