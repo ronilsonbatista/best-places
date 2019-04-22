@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
          GMSPlacesClient.provideAPIKey("AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ")
         
+        
+        let viewController = ListPlacesViewController(nibName: "ListPlacesViewController", bundle: nil)
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [viewController]
+        self.window!.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
