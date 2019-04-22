@@ -17,9 +17,9 @@ final class DetailsPlacesViewModel: NSObject {
     var formattedPhoneNumber: String
     var maxwidth: Int
     var photoReference: String
-    var reviews: ReviewsViewModel
+    var reviews: [ReviewsViewModel]
 
-    init(name: String, rating: Double, formattedAddress: String, formattedPhoneNumber: String, maxwidth: Int, photoReference: String, reviews: ReviewsViewModel) {
+    init(name: String, rating: Double, formattedAddress: String, formattedPhoneNumber: String, maxwidth: Int, photoReference: String, reviews: [ReviewsViewModel]) {
         
         self.name = name
         self.rating = rating

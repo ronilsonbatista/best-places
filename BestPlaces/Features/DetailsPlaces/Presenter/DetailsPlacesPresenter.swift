@@ -12,7 +12,7 @@ final class DetailsPlacesPresenter {
     
     fileprivate unowned let view: DetailsPlacesProtocol
     fileprivate let service: PlacesService
-    fileprivate(set) var detailsPlaces: DetailsPlaces?
+    fileprivate(set) var details: DetailsPlacesViewModel?
     
     init(view: DetailsPlacesProtocol) {
         self.view = view
@@ -39,7 +39,7 @@ extension DetailsPlacesPresenter {
                 return
             }
             
-            self.detailsPlaces = details
+            self.handleData(detail: details.result)
             self.view.reloadView()
             self.view.stopLoading()
         }) {  error in
@@ -52,9 +52,29 @@ extension DetailsPlacesPresenter {
 
 extension DetailsPlacesPresenter {
     
-   fileprivate func handleError() {
+    fileprivate func handleData(detail: DetailsResult) {
+        
+        var reviewsViewModel: [ReviewsViewModel] = []
+        
+        for reviews in detail.reviews {
+            reviewsViewModel.append(ReviewsViewModel(
+                authorName: reviews.authorName, rating: reviews.rating, profilePhotoURL: reviews.profilePhotoURL, relativeTimeDescription: reviews.relativeTimeDescription, text: reviews.text)
+            )
+        }
+        self.fillDetailsPlacesViewModel(detail: detail, reviewsViewModel: reviewsViewModel)
+    }
+    
+    fileprivate func fillDetailsPlacesViewModel(detail: DetailsResult, reviewsViewModel: [ReviewsViewModel]) {
+        
+        let details = DetailsPlacesViewModel(
+            name: detail.name, rating: detail.rating, formattedAddress: detail.formattedAddress, formattedPhoneNumber: detail.formattedPhoneNumber, maxwidth: detail.photos.first?.width ?? 0, photoReference: detail.photos.first?.photoReference ?? "", reviews: reviewsViewModel
+        )
+        
+        self.details = details
+    }
+    
+    fileprivate func handleError() {
         self.view.stopLoading()
         self.view.showAlertError(with: "Erro encontrado", message: "Desculpe-nos pelo erro. Iremos contorná-lo o mais rápido possível.", buttonTitle: "OK")
     }
-    
 }

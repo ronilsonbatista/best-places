@@ -87,7 +87,7 @@ struct Review: Codable {
     let authorURL: String
     let language: String
     let profilePhotoURL: String
-    let rating: Int
+    let rating: Double
     let relativeTimeDescription, text: String
     let time: Int
     
