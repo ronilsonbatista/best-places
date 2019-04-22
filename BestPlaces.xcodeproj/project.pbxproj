@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF5B44E543CF848CED2C9F7D /* Pods_BestPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9097C1D57AFC11CD784BE0F4 /* Pods_BestPlaces.framework */; };
 		D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130154D226A216000A2EB63 /* AppDelegate.swift */; };
-		D1301550226A216000A2EB63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130154F226A216000A2EB63 /* ViewController.swift */; };
 		D1301553226A216000A2EB63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1301551226A216000A2EB63 /* Main.storyboard */; };
 		D1301555226A216100A2EB63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1301554226A216100A2EB63 /* Assets.xcassets */; };
 		D1301558226A216100A2EB63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1301556226A216100A2EB63 /* LaunchScreen.storyboard */; };
@@ -24,6 +23,11 @@
 		D130157A226BF9A300A2EB63 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1301579226BF9A300A2EB63 /* Environment.swift */; };
 		D130157C226C1C4800A2EB63 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130157B226C1C4800A2EB63 /* Places.swift */; };
 		D130157E226C22BA00A2EB63 /* DetailsPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */; };
+		D1558848226D592600AA5AA4 /* DetailsPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558847226D592600AA5AA4 /* DetailsPlacesViewModel.swift */; };
+		D155884B226D594A00AA5AA4 /* DetailsPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558849226D594A00AA5AA4 /* DetailsPlacesViewController.swift */; };
+		D155884C226D594A00AA5AA4 /* DetailsPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D155884A226D594A00AA5AA4 /* DetailsPlacesViewController.xib */; };
+		D155884F226D596C00AA5AA4 /* DetailsPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155884E226D596C00AA5AA4 /* DetailsPlacesPresenter.swift */; };
+		D1558851226D597600AA5AA4 /* DetailsPlacesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558850226D597600AA5AA4 /* DetailsPlacesProtocol.swift */; };
 		D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */; };
 		D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */; };
 		D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */; };
@@ -41,7 +45,6 @@
 		C543A6963F38A83E161B6336 /* Pods-BestPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestPlaces.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BestPlaces/Pods-BestPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		D130154A226A216000A2EB63 /* BestPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D130154D226A216000A2EB63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D130154F226A216000A2EB63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1301552226A216000A2EB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1301554226A216100A2EB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1301557226A216100A2EB63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +60,11 @@
 		D1301579226BF9A300A2EB63 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		D130157B226C1C4800A2EB63 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlaces.swift; sourceTree = "<group>"; };
+		D1558847226D592600AA5AA4 /* DetailsPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesViewModel.swift; sourceTree = "<group>"; };
+		D1558849226D594A00AA5AA4 /* DetailsPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesViewController.swift; sourceTree = "<group>"; };
+		D155884A226D594A00AA5AA4 /* DetailsPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsPlacesViewController.xib; sourceTree = "<group>"; };
+		D155884E226D596C00AA5AA4 /* DetailsPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesPresenter.swift; sourceTree = "<group>"; };
+		D1558850226D597600AA5AA4 /* DetailsPlacesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesProtocol.swift; sourceTree = "<group>"; };
 		D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewController.swift; sourceTree = "<group>"; };
 		D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewController.xib; sourceTree = "<group>"; };
 		D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesPresenter.swift; sourceTree = "<group>"; };
@@ -129,9 +137,8 @@
 		D130155F226A264D00A2EB63 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1558843226D58F400AA5AA4 /* DetailsPlaces */,
 				D1F4350B226CB05F0010A0A1 /* ListPlaces */,
-				D130154F226A216000A2EB63 /* ViewController.swift */,
-				D1301551226A216000A2EB63 /* Main.storyboard */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 				D1301579226BF9A300A2EB63 /* Environment.swift */,
 				D1301559226A216100A2EB63 /* Info.plist */,
 				D1301556226A216100A2EB63 /* LaunchScreen.storyboard */,
+				D1301551226A216000A2EB63 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,6 +211,50 @@
 				D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		D1558843226D58F400AA5AA4 /* DetailsPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				D1558844226D58F900AA5AA4 /* Model */,
+				D1558845226D58FF00AA5AA4 /* View */,
+				D1558846226D590400AA5AA4 /* Presenter */,
+			);
+			path = DetailsPlaces;
+			sourceTree = "<group>";
+		};
+		D1558844226D58F900AA5AA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1558847226D592600AA5AA4 /* DetailsPlacesViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1558845226D58FF00AA5AA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D155884D226D594F00AA5AA4 /* CustomViewCell */,
+				D1558849226D594A00AA5AA4 /* DetailsPlacesViewController.swift */,
+				D155884A226D594A00AA5AA4 /* DetailsPlacesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1558846226D590400AA5AA4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D155884E226D596C00AA5AA4 /* DetailsPlacesPresenter.swift */,
+				D1558850226D597600AA5AA4 /* DetailsPlacesProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D155884D226D594F00AA5AA4 /* CustomViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViewCell;
 			sourceTree = "<group>";
 		};
 		D1F4350B226CB05F0010A0A1 /* ListPlaces */ = {
@@ -322,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1F43522226CD5900010A0A1 /* ListPlacesViewCell.xib in Resources */,
+				D155884C226D594A00AA5AA4 /* DetailsPlacesViewController.xib in Resources */,
 				D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */,
 				D1301558226A216100A2EB63 /* LaunchScreen.storyboard in Resources */,
 				D1301555226A216100A2EB63 /* Assets.xcassets in Resources */,
@@ -414,9 +467,10 @@
 				D1301572226A6A8B00A2EB63 /* ServiceError.swift in Sources */,
 				D130157E226C22BA00A2EB63 /* DetailsPlaces.swift in Sources */,
 				D1301578226BF6AE00A2EB63 /* PlacesService.swift in Sources */,
+				D155884B226D594A00AA5AA4 /* DetailsPlacesViewController.swift in Sources */,
 				D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */,
-				D1301550226A216000A2EB63 /* ViewController.swift in Sources */,
 				D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */,
+				D1558848226D592600AA5AA4 /* DetailsPlacesViewModel.swift in Sources */,
 				D1F43521226CD5900010A0A1 /* ListPlacesViewCell.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,
@@ -426,9 +480,11 @@
 				D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */,
 				D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */,
 				D1F4351B226CD32F0010A0A1 /* ExtensionUIColor.swift in Sources */,
+				D1558851226D597600AA5AA4 /* DetailsPlacesProtocol.swift in Sources */,
 				D1F4351E226CD54C0010A0A1 /* ExtensionNSObject.swift in Sources */,
 				D1F43518226CB1A90010A0A1 /* ListPlacesViewModel.swift in Sources */,
 				D1301570226A699200A2EB63 /* ServiceManager.swift in Sources */,
+				D155884F226D596C00AA5AA4 /* DetailsPlacesPresenter.swift in Sources */,
 				D1301566226A68B500A2EB63 /* ServiceRequest.swift in Sources */,
 				D130157C226C1C4800A2EB63 /* Places.swift in Sources */,
 			);
