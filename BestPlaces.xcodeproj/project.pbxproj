@@ -31,6 +31,11 @@
 		D1558856226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558854226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift */; };
 		D1558857226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1558855226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib */; };
 		D1558859226D67AF00AA5AA4 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558858226D67AF00AA5AA4 /* ReviewsViewModel.swift */; };
+		D155885B226E099D00AA5AA4 /* DetailsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155885A226E099D00AA5AA4 /* DetailsResult.swift */; };
+		D155885D226E09B600AA5AA4 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155885C226E09B600AA5AA4 /* Review.swift */; };
+		D155885F226E09E300AA5AA4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155885E226E09E300AA5AA4 /* Result.swift */; };
+		D1558861226E09EF00AA5AA4 /* OpeningHours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558860226E09EF00AA5AA4 /* OpeningHours.swift */; };
+		D1558863226E09FA00AA5AA4 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558862226E09FA00AA5AA4 /* Photo.swift */; };
 		D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */; };
 		D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */; };
 		D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */; };
@@ -71,6 +76,11 @@
 		D1558854226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesViewCell.swift; sourceTree = "<group>"; };
 		D1558855226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsPlacesViewCell.xib; sourceTree = "<group>"; };
 		D1558858226D67AF00AA5AA4 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
+		D155885A226E099D00AA5AA4 /* DetailsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsResult.swift; sourceTree = "<group>"; };
+		D155885C226E09B600AA5AA4 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		D155885E226E09E300AA5AA4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		D1558860226E09EF00AA5AA4 /* OpeningHours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningHours.swift; sourceTree = "<group>"; };
+		D1558862226E09FA00AA5AA4 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewController.swift; sourceTree = "<group>"; };
 		D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewController.xib; sourceTree = "<group>"; };
 		D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesPresenter.swift; sourceTree = "<group>"; };
@@ -213,8 +223,13 @@
 		D1301576226B546B00A2EB63 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				D130157B226C1C4800A2EB63 /* Places.swift */,
 				D130157D226C22BA00A2EB63 /* DetailsPlaces.swift */,
+				D155885A226E099D00AA5AA4 /* DetailsResult.swift */,
+				D1558860226E09EF00AA5AA4 /* OpeningHours.swift */,
+				D1558862226E09FA00AA5AA4 /* Photo.swift */,
+				D130157B226C1C4800A2EB63 /* Places.swift */,
+				D155885E226E09E300AA5AA4 /* Result.swift */,
+				D155885C226E09B600AA5AA4 /* Review.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -486,19 +501,24 @@
 				D1F43521226CD5900010A0A1 /* ListPlacesViewCell.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,
+				D1558863226E09FA00AA5AA4 /* Photo.swift in Sources */,
 				D130156A226A690D00A2EB63 /* ServiceHTTPMethod.swift in Sources */,
 				D1F43516226CB1900010A0A1 /* ListPlacesProtocol.swift in Sources */,
 				D130157A226BF9A300A2EB63 /* Environment.swift in Sources */,
 				D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */,
+				D155885F226E09E300AA5AA4 /* Result.swift in Sources */,
 				D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */,
 				D1F4351B226CD32F0010A0A1 /* ExtensionUIColor.swift in Sources */,
 				D1558851226D597600AA5AA4 /* DetailsPlacesProtocol.swift in Sources */,
 				D1F4351E226CD54C0010A0A1 /* ExtensionNSObject.swift in Sources */,
 				D1F43518226CB1A90010A0A1 /* ListPlacesViewModel.swift in Sources */,
+				D155885D226E09B600AA5AA4 /* Review.swift in Sources */,
 				D1301570226A699200A2EB63 /* ServiceManager.swift in Sources */,
 				D155884F226D596C00AA5AA4 /* DetailsPlacesPresenter.swift in Sources */,
 				D1301566226A68B500A2EB63 /* ServiceRequest.swift in Sources */,
 				D130157C226C1C4800A2EB63 /* Places.swift in Sources */,
+				D1558861226E09EF00AA5AA4 /* OpeningHours.swift in Sources */,
+				D155885B226E099D00AA5AA4 /* DetailsResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
