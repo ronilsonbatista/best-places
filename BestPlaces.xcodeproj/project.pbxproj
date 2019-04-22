@@ -28,6 +28,8 @@
 		D155884C226D594A00AA5AA4 /* DetailsPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D155884A226D594A00AA5AA4 /* DetailsPlacesViewController.xib */; };
 		D155884F226D596C00AA5AA4 /* DetailsPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155884E226D596C00AA5AA4 /* DetailsPlacesPresenter.swift */; };
 		D1558851226D597600AA5AA4 /* DetailsPlacesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558850226D597600AA5AA4 /* DetailsPlacesProtocol.swift */; };
+		D1558856226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558854226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift */; };
+		D1558857226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1558855226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib */; };
 		D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */; };
 		D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */; };
 		D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */; };
@@ -65,6 +67,8 @@
 		D155884A226D594A00AA5AA4 /* DetailsPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsPlacesViewController.xib; sourceTree = "<group>"; };
 		D155884E226D596C00AA5AA4 /* DetailsPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesPresenter.swift; sourceTree = "<group>"; };
 		D1558850226D597600AA5AA4 /* DetailsPlacesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesProtocol.swift; sourceTree = "<group>"; };
+		D1558854226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPlacesViewCell.swift; sourceTree = "<group>"; };
+		D1558855226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsPlacesViewCell.xib; sourceTree = "<group>"; };
 		D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewController.swift; sourceTree = "<group>"; };
 		D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewController.xib; sourceTree = "<group>"; };
 		D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesPresenter.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 		D155884D226D594F00AA5AA4 /* CustomViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				D1558854226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift */,
+				D1558855226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib */,
 			);
 			path = CustomViewCell;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				D1F43522226CD5900010A0A1 /* ListPlacesViewCell.xib in Resources */,
 				D155884C226D594A00AA5AA4 /* DetailsPlacesViewController.xib in Resources */,
 				D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */,
+				D1558857226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib in Resources */,
 				D1301558226A216100A2EB63 /* LaunchScreen.storyboard in Resources */,
 				D1301555226A216100A2EB63 /* Assets.xcassets in Resources */,
 				D1301553226A216000A2EB63 /* Main.storyboard in Resources */,
@@ -471,6 +478,7 @@
 				D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */,
 				D1301574226B4C4200A2EB63 /* Connectivity.swift in Sources */,
 				D1558848226D592600AA5AA4 /* DetailsPlacesViewModel.swift in Sources */,
+				D1558856226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift in Sources */,
 				D1F43521226CD5900010A0A1 /* ListPlacesViewCell.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,

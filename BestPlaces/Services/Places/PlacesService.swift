@@ -31,11 +31,11 @@ final class PlacesService {
         })
     }
     
-    func getDetailsPlaces(placeid: String, success: @escaping (DetailsPlaces?) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
+    func getDetailsPlaces(placeId: String, success: @escaping (DetailsPlaces?) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
         
         let serviceUrl = ServiceURL.domain.value + ServiceURL.detailsPlaces.value
         
-        let parameters = ["placeid": placeid,
+        let parameters = ["placeid": placeId,
                           "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
         
         ServiceRequest.shared.request(method: .get, url: serviceUrl, parameters: parameters, encoding: .default, success: { result in
