@@ -208,8 +208,8 @@
 		D130156B226A692D00A2EB63 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				D130156F226A699200A2EB63 /* ServiceManager.swift */,
 				D1301571226A6A8B00A2EB63 /* ServiceError.swift */,
+				D130156F226A699200A2EB63 /* ServiceManager.swift */,
 				D1301564226A689400A2EB63 /* ServiceMethods */,
 			);
 			path = Service;

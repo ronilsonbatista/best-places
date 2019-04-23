@@ -43,6 +43,12 @@ extension DetailsPlacesPresenter {
             self.view.reloadView()
             self.view.stopLoading()
         }) {  error in
+            if error.type == .noConnection {
+                self.view.stopLoading()
+                self.view.showAlertError(with: "Problema na conexão", message: "Encontramos problemas com a conexão. Tente ajustá-la para continuar navegando.", buttonTitle: "Tentar novamente", noConnection: true)
+                return
+            }
+            
             self.handleError()
         }
     }
@@ -75,6 +81,6 @@ extension DetailsPlacesPresenter {
     
     fileprivate func handleError() {
         self.view.stopLoading()
-        self.view.showAlertError(with: "Erro encontrado", message: "Desculpe-nos pelo erro. Iremos contorná-lo o mais rápido possível.", buttonTitle: "OK")
+        self.view.showAlertError(with: "Erro encontrado", message: "Desculpe-nos pelo erro. Iremos contorná-lo o mais rápido possível.", buttonTitle: "OK", noConnection: false)
     }
 }

@@ -58,7 +58,7 @@ extension ListPlacesViewController {
         self.navigationController?.pushViewController(nextController, animated: true)
     }
     
-   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
 }
@@ -83,10 +83,16 @@ extension ListPlacesViewController: ListPlacesProtocol {
         self.tableView.reloadData()
     }
     
-    func showAlertError(with title: String, message: String, buttonTitle: String) {
+    func showAlertError(with title: String, message: String, buttonTitle: String, noConnection: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
+        if noConnection { alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: doLoading)) }
+        else { alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil)) }
+        
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func doLoading(action: UIAlertAction) {
+        self.presenter.getCurrentLocation()
     }
     
     func navigationBarConfiguration() {

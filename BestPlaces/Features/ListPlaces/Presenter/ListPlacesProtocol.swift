@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ListPlacesProtocol: class {
     
     func startLoading()
     func stopLoading()
     func reloadView()
-    func showAlertError(with title: String, message: String, buttonTitle: String)
+    func showAlertError(with title: String, message: String, buttonTitle: String, noConnection: Bool)
+    func doLoading(action: UIAlertAction)
     func navigationBarConfiguration()
 }

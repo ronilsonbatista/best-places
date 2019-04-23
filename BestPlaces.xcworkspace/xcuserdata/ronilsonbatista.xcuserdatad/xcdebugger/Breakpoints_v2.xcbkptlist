@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.051178"
+            timestampString = "577678845.2523561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.056586"
+            timestampString = "577678845.2561311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.0571001"
+            timestampString = "577678845.25789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.059043"
+            timestampString = "577678845.258239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -74,11 +74,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.0609159"
+            timestampString = "577678845.258528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
+            timestampString = "577678845.2589231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "handleData(detail:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,27 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.061437"
+            timestampString = "577678845.259106"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "handleData(detail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BestPlaces/Features/DetailsPlaces/Presenter/DetailsPlacesPresenter.swift"
-            timestampString = "577651677.06189"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "fillDetailsPlacesViewModel(detail:reviewsViewModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/View/DetailsPlacesViewController.swift"
-            timestampString = "577676391.889611"
+            timestampString = "577678845.2613471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/View/DetailsPlacesViewController.swift"
-            timestampString = "577676391.902006"
+            timestampString = "577678845.268576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/View/DetailsPlacesViewController.swift"
-            timestampString = "577676391.905952"
+            timestampString = "577678845.274498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -186,12 +186,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BestPlaces/Features/DetailsPlaces/View/DetailsPlacesViewController.swift"
-            timestampString = "577676391.906936"
+            timestampString = "577678845.275396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/ListPlaces/Presenter/ListPlacesPresenter.swift"
+            timestampString = "577678845.2762541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getPlaces(location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/ListPlaces/Presenter/ListPlacesPresenter.swift"
+            timestampString = "577678845.276934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "getCoordinate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/ListPlaces/Presenter/ListPlacesPresenter.swift"
+            timestampString = "577678845.277112"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getPlaces(location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/ListPlaces/Presenter/ListPlacesPresenter.swift"
+            timestampString = "577678845.27722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getPlaces(location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BestPlaces/Features/DetailsPlaces/View/DetailsPlacesViewController.swift"
+            timestampString = "577678845.277365"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "doLoading(action:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
