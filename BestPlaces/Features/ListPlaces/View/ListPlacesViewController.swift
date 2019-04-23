@@ -42,19 +42,19 @@ extension ListPlacesViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.places?.results.count ?? 0
+        return self.presenter.places?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CardPlaceViewCell.identifier, for: indexPath) as! CardPlaceViewCell
         cell.selectionStyle = .none
-        cell.setup(place: (self.presenter.places?.results[indexPath.row])!)
+        cell.setup(place: (self.presenter.places?[indexPath.row])!)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextController = DetailsPlacesViewController()
-        nextController.placeId = (self.presenter.places?.results[indexPath.row].placeID)!
+        nextController.placeId = (self.presenter.places?[indexPath.row].id)!
         self.navigationController?.pushViewController(nextController, animated: true)
     }
     

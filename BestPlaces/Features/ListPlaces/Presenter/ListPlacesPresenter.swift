@@ -13,8 +13,9 @@ final class ListPlacesPresenter {
     
     fileprivate unowned let view: ListPlacesProtocol
     fileprivate let service: PlacesService
-    fileprivate(set) var places: Places?
     fileprivate let locManager = CLLocationManager()
+    
+    fileprivate(set) var places: [ListPlacesViewModel]?
     
     init(view: ListPlacesProtocol) {
         self.view = view
@@ -66,6 +67,11 @@ extension ListPlacesPresenter {
             self.getPlaces(location: "\(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude)")
         }
     }
+}
+
+// MARK: - Rest full methods
+
+extension ListPlacesPresenter {
     
     fileprivate func getPlaces(location: String) {
         
@@ -77,12 +83,23 @@ extension ListPlacesPresenter {
                 return
             }
             
-            self.places = places
+            self.handleData(placeResults: places.results)
             self.view.stopLoading()
             self.view.reloadView()
         }) {  error in
             self.handleError()
         }
+    }
+    
+    fileprivate func handleData(placeResults: [Result]) {
+        
+        var places: [ListPlacesViewModel] = []
+        
+        for place in placeResults {
+            places.append(ListPlacesViewModel(id: place.placeID, name: place.name, formattedAddress: place.vicinity ?? "", openNow: place.openingHours?.openNow ?? false))
+        }
+        
+        self.places = places
     }
     
     fileprivate func handleError() {

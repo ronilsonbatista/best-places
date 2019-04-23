@@ -23,9 +23,10 @@ class CardPlaceViewCell: UITableViewCell {
         self.borderView.clipsToBounds = true
     }
     
-    func setup(place: Result) {
+    func setup(place: ListPlacesViewModel) {
         self.placeNameLabel.text = place.name
-        self.vicinityLabel.text = place.vicinity
-        self.openingHoursLabel.text = "Aberto"
+        self.vicinityLabel.text = place.formattedAddress
+        self.openingHoursLabel.text = place.openNowText
+        self.openingHoursLabel.textColor = place.openNowColor
     }
 }
