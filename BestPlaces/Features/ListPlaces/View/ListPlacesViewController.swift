@@ -2,32 +2,28 @@
 //  ListPlacesViewController.swift
 //  BestPlaces
 //
-//  Created by Ronilson Batista on 21/04/19.
+//  Created by Ronilson Batista on 22/04/19.
 //  Copyright © 2019 Ronilson Batista. All rights reserved.
 //
 
 import UIKit
 import SVProgressHUD
 
-private let reuseIdentifier = "Cell"
-
-class ListPlacesViewController: UICollectionViewController {
+class ListPlacesViewController: UITableViewController {
     
     fileprivate var presenter: ListPlacesPresenter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.presenter = ListPlacesPresenter(view: self)
         self.presenter.setupInitialization()
-        self.collectionView.backgroundColor = .colorBackground
-
-        // Register cell classes
-         self.collectionView!.register(UINib(nibName: ListPlacesViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: ListPlacesViewCell.identifier)
         
-        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: self.collectionView.bounds.size.width, height: 132)
-        }
+        self.tableView.backgroundColor = .colorBackground
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 165
+        
+        self.tableView.register(UINib(nibName: CardPlaceViewCell.identifier, bundle: nil), forCellReuseIdentifier: CardPlaceViewCell.identifier)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,39 +33,33 @@ class ListPlacesViewController: UICollectionViewController {
     }
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - Table view data source
 
 extension ListPlacesViewController {
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.presenter.places?.results.count ?? 0
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListPlacesViewCell.identifier, for: indexPath) as! ListPlacesViewCell
-        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CardPlaceViewCell.identifier, for: indexPath) as! CardPlaceViewCell
+        cell.selectionStyle = .none
         cell.setup(place: (self.presenter.places?.results[indexPath.row])!)
-        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-    
-        return CGSize(width: self.collectionView.bounds.size.width, height: 132)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextController = DetailsPlacesViewController()
+        nextController.placeId = (self.presenter.places?.results[indexPath.row].placeID)!
+        self.navigationController?.pushViewController(nextController, animated: true)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let index = indexPath.row
-   
-        let nextController = DetailsPlacesViewController()
-        nextController.placeId = (self.presenter.places?.results[index].placeID)!
-        self.navigationController?.pushViewController(nextController, animated: true)
+   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 
@@ -90,7 +80,7 @@ extension ListPlacesViewController: ListPlacesProtocol {
     }
     
     func reloadView() {
-        self.collectionView.reloadData()
+        self.tableView.reloadData()
     }
     
     func showAlertError(with title: String, message: String, buttonTitle: String) {

@@ -38,15 +38,15 @@
 		D1558863226E09FA00AA5AA4 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558862226E09FA00AA5AA4 /* Photo.swift */; };
 		D1558866226E293600AA5AA4 /* ReviewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558864226E293600AA5AA4 /* ReviewsViewCell.swift */; };
 		D1558867226E293600AA5AA4 /* ReviewsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1558865226E293600AA5AA4 /* ReviewsViewCell.xib */; };
-		D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */; };
-		D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */; };
+		D155886A226E816300AA5AA4 /* ListPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1558868226E816300AA5AA4 /* ListPlacesViewController.swift */; };
+		D155886B226E816300AA5AA4 /* ListPlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1558869226E816300AA5AA4 /* ListPlacesViewController.xib */; };
+		D155886E226E858A00AA5AA4 /* CardPlaceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155886C226E858A00AA5AA4 /* CardPlaceViewCell.swift */; };
+		D155886F226E858A00AA5AA4 /* CardPlaceViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D155886D226E858A00AA5AA4 /* CardPlaceViewCell.xib */; };
 		D1F43514226CB1810010A0A1 /* ListPlacesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */; };
 		D1F43516226CB1900010A0A1 /* ListPlacesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43515226CB1900010A0A1 /* ListPlacesProtocol.swift */; };
 		D1F43518226CB1A90010A0A1 /* ListPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F43517226CB1A90010A0A1 /* ListPlacesViewModel.swift */; };
 		D1F4351B226CD32F0010A0A1 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4351A226CD32F0010A0A1 /* ExtensionUIColor.swift */; };
 		D1F4351E226CD54C0010A0A1 /* ExtensionNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4351D226CD54C0010A0A1 /* ExtensionNSObject.swift */; };
-		D1F43521226CD5900010A0A1 /* ListPlacesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4351F226CD5900010A0A1 /* ListPlacesViewCell.swift */; };
-		D1F43522226CD5900010A0A1 /* ListPlacesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1F43520226CD5900010A0A1 /* ListPlacesViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,15 +85,15 @@
 		D1558862226E09FA00AA5AA4 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D1558864226E293600AA5AA4 /* ReviewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewCell.swift; sourceTree = "<group>"; };
 		D1558865226E293600AA5AA4 /* ReviewsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsViewCell.xib; sourceTree = "<group>"; };
-		D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewController.swift; sourceTree = "<group>"; };
-		D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewController.xib; sourceTree = "<group>"; };
+		D1558868226E816300AA5AA4 /* ListPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewController.swift; sourceTree = "<group>"; };
+		D1558869226E816300AA5AA4 /* ListPlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewController.xib; sourceTree = "<group>"; };
+		D155886C226E858A00AA5AA4 /* CardPlaceViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlaceViewCell.swift; sourceTree = "<group>"; };
+		D155886D226E858A00AA5AA4 /* CardPlaceViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardPlaceViewCell.xib; sourceTree = "<group>"; };
 		D1F43513226CB1810010A0A1 /* ListPlacesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesPresenter.swift; sourceTree = "<group>"; };
 		D1F43515226CB1900010A0A1 /* ListPlacesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesProtocol.swift; sourceTree = "<group>"; };
 		D1F43517226CB1A90010A0A1 /* ListPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewModel.swift; sourceTree = "<group>"; };
 		D1F4351A226CD32F0010A0A1 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		D1F4351D226CD54C0010A0A1 /* ExtensionNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject.swift; sourceTree = "<group>"; };
-		D1F4351F226CD5900010A0A1 /* ListPlacesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesViewCell.swift; sourceTree = "<group>"; };
-		D1F43520226CD5900010A0A1 /* ListPlacesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlacesViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,8 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				D1F4351C226CD45D0010A0A1 /* CustomViewCell */,
-				D1F4350F226CB1490010A0A1 /* ListPlacesViewController.swift */,
-				D1F43510226CB1490010A0A1 /* ListPlacesViewController.xib */,
+				D1558868226E816300AA5AA4 /* ListPlacesViewController.swift */,
+				D1558869226E816300AA5AA4 /* ListPlacesViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,8 +336,8 @@
 		D1F4351C226CD45D0010A0A1 /* CustomViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D1F4351F226CD5900010A0A1 /* ListPlacesViewCell.swift */,
-				D1F43520226CD5900010A0A1 /* ListPlacesViewCell.xib */,
+				D155886C226E858A00AA5AA4 /* CardPlaceViewCell.swift */,
+				D155886D226E858A00AA5AA4 /* CardPlaceViewCell.xib */,
 			);
 			path = CustomViewCell;
 			sourceTree = "<group>";
@@ -403,12 +403,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F43522226CD5900010A0A1 /* ListPlacesViewCell.xib in Resources */,
+				D155886B226E816300AA5AA4 /* ListPlacesViewController.xib in Resources */,
 				D155884C226D594A00AA5AA4 /* DetailsPlacesViewController.xib in Resources */,
-				D1F43512226CB1490010A0A1 /* ListPlacesViewController.xib in Resources */,
 				D1558857226D5BD100AA5AA4 /* DetailsPlacesViewCell.xib in Resources */,
 				D1558867226E293600AA5AA4 /* ReviewsViewCell.xib in Resources */,
 				D1301558226A216100A2EB63 /* LaunchScreen.storyboard in Resources */,
+				D155886F226E858A00AA5AA4 /* CardPlaceViewCell.xib in Resources */,
 				D1301555226A216100A2EB63 /* Assets.xcassets in Resources */,
 				D1301553226A216000A2EB63 /* Main.storyboard in Resources */,
 			);
@@ -505,16 +505,16 @@
 				D1558848226D592600AA5AA4 /* DetailsPlacesViewModel.swift in Sources */,
 				D1558859226D67AF00AA5AA4 /* ReviewsViewModel.swift in Sources */,
 				D1558856226D5BD100AA5AA4 /* DetailsPlacesViewCell.swift in Sources */,
-				D1F43521226CD5900010A0A1 /* ListPlacesViewCell.swift in Sources */,
 				D1301568226A68DF00A2EB63 /* ServiceManagerProtocol.swift in Sources */,
 				D130156E226A694D00A2EB63 /* ServiceEncoding.swift in Sources */,
+				D155886A226E816300AA5AA4 /* ListPlacesViewController.swift in Sources */,
 				D1558863226E09FA00AA5AA4 /* Photo.swift in Sources */,
 				D130156A226A690D00A2EB63 /* ServiceHTTPMethod.swift in Sources */,
+				D155886E226E858A00AA5AA4 /* CardPlaceViewCell.swift in Sources */,
 				D1F43516226CB1900010A0A1 /* ListPlacesProtocol.swift in Sources */,
 				D130157A226BF9A300A2EB63 /* Environment.swift in Sources */,
 				D130154E226A216000A2EB63 /* AppDelegate.swift in Sources */,
 				D155885F226E09E300AA5AA4 /* Result.swift in Sources */,
-				D1F43511226CB1490010A0A1 /* ListPlacesViewController.swift in Sources */,
 				D1F4351B226CD32F0010A0A1 /* ExtensionUIColor.swift in Sources */,
 				D1558851226D597600AA5AA4 /* DetailsPlacesProtocol.swift in Sources */,
 				D1F4351E226CD54C0010A0A1 /* ExtensionNSObject.swift in Sources */,

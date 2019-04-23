@@ -67,6 +67,10 @@ extension DetailsPlacesViewController {
         default:  return UITableViewCell()
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 // MARK: DetailsPlacesProtocol
@@ -76,7 +80,7 @@ extension DetailsPlacesViewController: DetailsPlacesProtocol {
     func startLoading() {
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setForegroundColor(.colorGreenyBlue)
-        SVProgressHUD.setBackgroundColor(.colorBackground)
+        SVProgressHUD.setBackgroundColor(.white)
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
     }
