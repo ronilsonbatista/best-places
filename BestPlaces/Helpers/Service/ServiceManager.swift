@@ -22,7 +22,7 @@ final class ServiceManager: ServiceManagerProtocol {
         }()
         
         // HTTP method used
-        let requestMethod = HTTPMethod(rawValue: method.rawValue)!
+        let requestMethod = HTTPMethod(rawValue: method.rawValue)
         
         if !Connectivity.isConnectedToInternet() {
             failure(ServiceError(type: .noConnection))
@@ -30,7 +30,7 @@ final class ServiceManager: ServiceManagerProtocol {
         }
         
         // Request
-        Alamofire.request(url, method: requestMethod, parameters: parameters, encoding: requestEncoding, headers: nil)
+        AF.request(url, method: requestMethod, parameters: parameters, encoding: requestEncoding, headers: nil)
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseJSON { response in
@@ -61,7 +61,7 @@ final class ServiceManager: ServiceManagerProtocol {
         }
     }
     
-    private func handleError(with response: DataResponse<Any>) -> ServiceError {
+    private func handleError(with response: DataResponse<Any, AFError>) -> ServiceError {
         
         guard let statusCode = response.response?.statusCode else {
             return ServiceError(type: .badRequest)

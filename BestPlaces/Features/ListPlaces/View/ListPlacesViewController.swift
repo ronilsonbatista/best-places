@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+//import SVProgressHUD
 
 class ListPlacesViewController: UITableViewController {
     
@@ -68,15 +68,15 @@ extension ListPlacesViewController {
 extension ListPlacesViewController: ListPlacesProtocol {
     
     func startLoading() {
-        SVProgressHUD.setDefaultStyle(.custom)
-        SVProgressHUD.setForegroundColor(.colorGreenyBlue)
-        SVProgressHUD.setBackgroundColor(.colorBackground)
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.show()
+//        SVProgressHUD.setDefaultStyle(.custom)
+//        SVProgressHUD.setForegroundColor(.colorGreenyBlue)
+//        SVProgressHUD.setBackgroundColor(.colorBackground)
+//        SVProgressHUD.setDefaultMaskType(.clear)
+//        SVProgressHUD.show()
     }
     
     func stopLoading() {
-        SVProgressHUD.dismiss()
+//        SVProgressHUD.dismiss()
     }
     
     func reloadView() {

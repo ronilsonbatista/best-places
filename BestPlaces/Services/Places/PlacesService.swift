@@ -15,7 +15,7 @@ final class PlacesService {
         let serviceUrl = ServiceURL.domain.value + ServiceURL.places.value
         
         let parameters = ["location": location,
-                          "radius": 500,
+                          "radius": 90000,
                           "types": "parking",
                           "key": "AIzaSyCh4YlPwY-RWIJI0zAcUto-82Xfzfx-pqQ"] as [String: Any]
         

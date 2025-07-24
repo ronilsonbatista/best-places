@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVProgressHUD
+//import SVProgressHUD
 
 class DetailsPlacesViewController: UITableViewController {
     
@@ -78,15 +78,15 @@ extension DetailsPlacesViewController {
 extension DetailsPlacesViewController: DetailsPlacesProtocol {
     
     func startLoading() {
-        SVProgressHUD.setDefaultStyle(.custom)
-        SVProgressHUD.setForegroundColor(.colorGreenyBlue)
-        SVProgressHUD.setBackgroundColor(.white)
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.show()
+//        SVProgressHUD.setDefaultStyle(.custom)
+//        SVProgressHUD.setForegroundColor(.colorGreenyBlue)
+//        SVProgressHUD.setBackgroundColor(.white)
+//        SVProgressHUD.setDefaultMaskType(.clear)
+//        SVProgressHUD.show()
     }
     
     func stopLoading() {
-        SVProgressHUD.dismiss()
+//        SVProgressHUD.dismiss()
     }
     
     func reloadView() {
